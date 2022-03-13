@@ -79,7 +79,7 @@ typedef struct {
 
 Vector * crearVector(int n) {
    Vector* v=(Vector*)malloc(sizeof(Vector));
-   v->datos=(Vector*)calloc(n, sizeof(Vector));
+   v->datos=(int*)calloc(n, sizeof(int));
    v->capacidad=n;
    return v;
 }
@@ -101,7 +101,7 @@ la cual retorna el valor en la posición i del vector v.
 int obtenerValor(Vector * v, int i) {
    int valor;
    valor=v->datos[i];
-   return 0;
+   return valor;
 }
 
 /*
